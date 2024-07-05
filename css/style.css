@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: black; /* Gradiente linear metade branco e metade preto */
+}
+
+h1 {
+  color: white;
+  top: 100px;
+  position: absolute;
+  left: 500px;
+  z-index: 1;
+}
+
+@keyframes neonAnimation {
+  0% {
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 70px #00f, 0 0 80px #00f, 0 0 100px #00f, 0 0 150px #00f;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+#container3D{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.teste {
+  display: flex;
+}
+
+.mobile{
+  display: flex;;
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-off {
+  width: 80px;
+  display: block;
+  position: absolute;
+  right: 7.2%;
+  bottom: -3px;
+}
+
+.button-on {
+  width: 80px;
+  display: block;
+  position: absolute;
+  right: 7.2%;
+  bottom: -3px;
+  display: none;
+}
+
+.toggle-btn {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+
+.toggle-btn::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #000;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s; /* Adicionando transição para suavizar o movimento */
+}
+
+.toggle-btn.active::before {
+  transform: translateX(38px); /* Movendo o círculo para a direita */
+}
