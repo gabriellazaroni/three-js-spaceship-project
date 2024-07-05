@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background: black; /* Gradiente linear metade branco e metade preto */
+  background: black;
 }
 
 h1 {
@@ -22,48 +22,21 @@ h1 {
 }
 
 #container3D{
-  position: relative;
   top: 0;
   left: 0;
 }
 
-.teste {
-  display: flex;
-}
-
-.mobile{
-  display: flex;;
-  position: absolute;
-  z-index: 1;
-  color: #fff;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100vw;
-  margin-top: 20px;
-  align-items: center;
-}
-
-.button-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 .button-off {
   width: 80px;
-  display: block;
-  position: absolute;
-  right: 7.2%;
-  bottom: -3px;
+  margin-left: 80px;
+  margin-bottom: 10px;
 }
 
 .button-on {
   width: 80px;
-  display: block;
-  position: absolute;
-  right: 7.2%;
-  bottom: -3px;
   display: none;
+  margin-left: 80px;
+  margin-bottom: 10px;
 }
 
 .toggle-btn {
@@ -74,6 +47,7 @@ h1 {
   cursor: pointer;
   position: absolute;
   z-index: 1;
+  margin-left: 10px;
 }
 
 .toggle-btn::before {
@@ -85,9 +59,19 @@ h1 {
   background-color: #000;
   top: 2px;
   left: 2px;
-  transition: left 0.3s; /* Adicionando transição para suavizar o movimento */
+  transition: left 0.3s;
 }
 
 .toggle-btn.active::before {
-  transform: translateX(38px); /* Movendo o círculo para a direita */
+  transform: translateX(38px);
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: start;
+  height: 100px;
+  margin-left: 20px;
 }
