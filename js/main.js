@@ -11,6 +11,8 @@ let objToRender = 'nave';
 
 const loader = new GLTFLoader();
 
+const loaderElement = document.getElementById('loader');
+
 loader.load(
   `models/${objToRender}/scene.gltf`,
   function (gltf) {
@@ -30,12 +32,15 @@ loader.load(
 
     controls.target.copy(center);
     controls.update();
+
+    loaderElement.style.display = 'none';
   },
   function (xhr) {
     console.log((xhr.loaded / xhr.total * 100) + '% loaded');
   },
   function (error) {
     console.error(error);
+    loaderElement.style.display = 'none';
   }
 );
 
