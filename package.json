@@ -4,7 +4,8 @@
   "description": "Este projeto utiliza a biblioteca Three.js para renderizar um modelo 3D em uma página web. Ele também inclui controles de órbita e a capacidade de alternar a luz direcional.",
   "main": "build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p dist && cleancss -o dist/style.min.css css/style.css && html-minifier --collapse-whitespace --remove-comments --minify-css true --minify-js true index.html -o dist/index.html"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/gabriellazaroni/three-js-spaceship-project/issues"
   },
-  "homepage": "https://github.com/gabriellazaroni/three-js-spaceship-project#readme"
+  "homepage": "https://github.com/gabriellazaroni/three-js-spaceship-project#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0"
+  }
 }
